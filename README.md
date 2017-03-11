@@ -13,18 +13,18 @@ I used to this <a href="http://stackoverflow.com/questions/9413216/simple-digit-
 as a reference to my code. Also, remember to build huge dataset to help the KNN model to clasify without any ambiguity and to improve the results.
 
 Step-1: Import the training image and identify its contours and regions.
-Step-2: Convert the BGR image into grayscale and threshold. Use this image to find contours. Draw a rectangular bounding box for every contours.
-Step-3: For every contours resize the region and get the input from the user. Record the region and the user response in ASCII format.
-Step-4: Store the trained data in two txt files. This completes the training part. 
+<br/>Step-2: Convert the BGR image into grayscale and threshold. Use this image to find contours. Draw a rectangular bounding box for every contours.
+<br/>Step-3: For every contours resize the region and get the input from the user. Record the region and the user response in ASCII format.
+<br/>Step-4: Store the trained data in two txt files. This completes the training part. 
 
 Implementation:
 
 Step-1: Import the dataset and train the model.
-Step-2: Stream Video and collect frames. 
-Step-3: Convert the BGR image into grayscale and threshold. Find contours and for every contour extract x,y,w,h. 
-Step-4: Separate every single region and feed it to the KNN model to find the closest possible match. Vary the value of K, to incorporate proper classification of data.
-Step-5: Once classified the corresponding response is pulled from the saved txt file. The value is converted into string. 
-Step-6: Show the image towards the camera and check whether the data that it is showing is right. Then press enter from the numpad. This stops the node and it starts to publish data to another node, by stitching the regions in nearby pixel. 
+<br/>Step-2: Stream Video and collect frames. 
+<br/>Step-3: Convert the BGR image into grayscale and threshold. Find contours and for every contour extract x,y,w,h. 
+<br/>Step-4: Separate every single region and feed it to the KNN model to find the closest possible match. Vary the value of K, to incorporate proper classification of data.
+<br/>Step-5: Once classified the corresponding response is pulled from the saved txt file. The value is converted into string. 
+<br/>Step-6: Show the image towards the camera and check whether the data that it is showing is right. Then press enter from the numpad. This stops the node and it starts to publish data to another node, by stitching the regions in nearby pixel. 
 
 P.S: I'm new to machine learning, hence forgive me if you find any noob mistake. Feel free to criticise. This project is developed with support from Fulton Undergraduate Research Initiatives grant. Thanks to them !
 
