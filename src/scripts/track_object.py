@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+ #!/usr/bin/env python
 
 import cv2
 import sys
@@ -14,8 +14,8 @@ if __name__ == '__main__':
 
 		hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
 
-		lower = np.array([30, 150, 50])
-		upper = np.array([255, 255, 180])
+		lower = np.array([25 ,45, 100])
+		upper = np.array([180, 255, 255])
 
 		mask = cv2.inRange(hsv, lower, upper)
 		output = cv2.bitwise_and(frame, frame, mask = mask)
@@ -28,9 +28,9 @@ if __name__ == '__main__':
 
 		for contour in contours:
 			[x,y,w,h] = cv2.boundingRect(contour)
-			# if cv2.contourArea(contour)>3000 and cv2.contourArea(contour)<4000:
-			if h>50:
-				cv2.rectangle(frame,(x,y),(x+w,y+h),(255,0,0),1)
+			if cv2.contourArea(contour)>500:
+				if h>50:
+					cv2.rectangle(frame,(x,y),(x+w,y+h),(255,0,0),1)
 
 		cv2.imshow('frame',frame)
 		cv2.imshow('mask',mask)
@@ -39,3 +39,5 @@ if __name__ == '__main__':
 
 		if key == 27:
 			sys.exit()
+			cv2.destroyAllWindows()
+		
