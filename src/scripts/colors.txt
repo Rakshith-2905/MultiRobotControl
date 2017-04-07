@@ -1,0 +1,10 @@
+green:
+
+lower = np.array([32 ,42, 88])
+upper = np.array([90, 200, 235])
+
+orange:
+        
+lower = np.array([150 ,95, 112])
+upper = np.array([160, 105, 122])
+
